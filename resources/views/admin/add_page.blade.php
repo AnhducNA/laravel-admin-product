@@ -1,7 +1,10 @@
+@extends('layouts.admin')
+
+@section('content')
 <div id="main-content-wp" class="add-cat-page">
     <div class="wrap clearfix">
-        <?php require 'inc/sidebar.php'; ?>
-        <div id="content" class="fl-right">      
+        @include('layouts.sidebar')
+        <div id="content" class="fl-right">
             <div class="section" id="title-page">
                 <div class="clearfix">
                     <h3 id="index" class="fl-left">Thêm trang</h3>
@@ -29,3 +32,4 @@
         </div>
     </div>
 </div>
+@endsection

@@ -21,7 +21,7 @@
         <div id="container">
             <div id="header-wp">
                 <div class="wp-inner clearfix">
-                    <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
+                    <a href="{{route('list_post')}}" title="" id="logo" class="fl-left">ADMIN</a>
                     <ul id="main-menu" class="fl-left">
                         <li>
                             <a href="{{route('list_page')}}" title="">Trang</a>
@@ -74,6 +74,17 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="" title="">Users</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="{{route('add_user')}}" title="">Thêm mới Users</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('list_user')}}" title="">Danh sách Users</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="{{route('menu')}}" title="">Menu</a>
                         </li>
                     </ul>
@@ -84,7 +95,7 @@
                             </div>
                             <h3 id="account" class="fl-right">Admin</h3>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul id="dropdown-user-menu" class="dropdown-menu">
                             <li><a href="{{route('info_account')}}" title="Thông tin cá nhân">Thông tin tài khoản</a></li>
                             <li><a href="#" title="Thoát">Thoát</a></li>
                         </ul>
@@ -106,6 +117,29 @@
     <script src="{{asset('assets/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/js/plugins/ckeditor/ckeditor.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/js/main.js')}}" type="text/javascript"></script>
+    <!-- #dropdown-user -->
+    <script>
+        $('#dropdown-user').mouseover(function() {
+            if ($('#dropdown-user-menu').hasClass('.active')) {
+                $('#dropdown-user-menu').css('display', 'none');
+                $('#dropdown-user-menu').removeClass('.active');
+
+            } else {
+                $('#dropdown-user-menu').addClass('.active');
+                $('#dropdown-user-menu').css('display', 'block');
+            }
+        })
+        $('#dropdown-user').mouseout(function() {
+            if ($('#dropdown-user-menu').hasClass('.active')) {
+                $('#dropdown-user-menu').css('display', 'none');
+                $('#dropdown-user-menu').removeClass('.active');
+
+            } else {
+                $('#dropdown-user-menu').addClass('.active');
+                $('#dropdown-user-menu').css('display', 'block');
+            }
+        })
+    </script>
 </body>
 
 </html>

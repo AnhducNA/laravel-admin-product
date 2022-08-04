@@ -19,19 +19,6 @@ class AdminController extends Controller
         return view('admin.list_cat_post');
     }
 
-    function list_product()
-    {
-        return view('admin.list_product');
-    }
-    function add_product()
-    {
-        return view('admin.add_product');
-    }
-    function list_cat_product()
-    {
-        return view('admin.list_cat_product');
-    }
-
     function list_page()
     {
         return view('admin.list_page');

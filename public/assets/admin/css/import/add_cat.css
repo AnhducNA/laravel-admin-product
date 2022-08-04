@@ -1,6 +1,6 @@
 /*ADD CAT*/
 .add-cat-page #detail-page .section-detail label{ display: block; padding-bottom: 10px; font-family: 'Roboto Medium'; font-weight: normal;}
-.add-cat-page #detail-page .section-detail input[type="text"]{
+.add-cat-page #detail-page .section-detail input{
     display: block;
     padding: 5px 10px;
     border: 1px solid #ddd;
