@@ -16,4 +16,32 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/admin/product/list', 'App/Http/Controllers/AdminProductController@list');
+Route::get('/admin/post/list', 'App\Http\Controllers\AdminController@list_post')
+    ->name('list_post');
+Route::get('/admin/post/listCat', 'App\Http\Controllers\AdminController@list_cat_post')
+    ->name('list_cat_post');
+Route::get('/admin/post/add', 'App\Http\Controllers\AdminController@add_post')
+    ->name('add_post');
+
+Route::get('/admin/product/list', 'App\Http\Controllers\AdminController@list_product')
+    ->name('list_product');
+Route::get('/admin/product/listCat', 'App\Http\Controllers\AdminController@list_cat_product')
+    ->name('list_cat_product');
+Route::get('/admin/product/add', 'App\Http\Controllers\AdminController@add_product')
+    ->name('add_product');
+
+Route::get('/admin/page/list', 'App\Http\Controllers\AdminController@list_page')
+    ->name('list_page');
+Route::get('/admin/page/add', 'App\Http\Controllers\AdminController@add_page')
+    ->name('add_page');
+
+Route::get('/admin/order/list', 'App\Http\Controllers\AdminController@list_order')
+    ->name('list_order');
+Route::get('/admin/customer/list', 'App\Http\Controllers\AdminController@list_customer')
+    ->name('list_customer');
+
+Route::get('/admin/menu', 'App\Http\Controllers\AdminController@menu')
+    ->name('menu');
+
+Route::get('/admin/info_account', 'App\Http\Controllers\AdminController@info_account')
+    ->name('info_account');
