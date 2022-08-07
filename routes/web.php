@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/admin', 'App\Http\Controllers\AdminUserController@list_user');
 Route::get('/admin/user/list', 'App\Http\Controllers\AdminUserController@list_user')
     ->name('list_user');
 Route::get('/admin/user/listCat', 'App\Http\Controllers\AdminUserController@list_cat_user')

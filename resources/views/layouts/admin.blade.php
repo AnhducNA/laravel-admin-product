@@ -63,7 +63,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="" title="">Bán hàng</a>
+                            <a href="{{route('list_order')}}" title="">Bán hàng</a>
                             <ul class="sub-menu">
                                 <li>
                                     <a href="{{route('list_order')}}" title="">Danh sách đơn hàng</a>
