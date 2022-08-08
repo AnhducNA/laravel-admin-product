@@ -13,7 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Đăng ký thành viên
+Route::get('/register', 'App\Http\Controllers\Auth\RegisterController@getRegister');
+Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@postRegister');
+
+// Đăng nhập và xử lý đăng nhập
+Route::get('/login', 'App\Http\Controllers\Auth\LoginController@getLogin');
+Route::post('/login', 'App\Http\Controllers\Auth\LoginController@postLogin');
+
+// Đăng xuất
+Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\LogoutController@getLogout']);
+
 Route::get('/admin', 'App\Http\Controllers\AdminUserController@list_user');
+Route::get('/', 'App\Http\Controllers\AdminUserController@list_user');
+
 Route::get('/admin/user/list', 'App\Http\Controllers\AdminUserController@list_user')
     ->name('list_user');
 Route::get('/admin/user/listCat', 'App\Http\Controllers\AdminUserController@list_cat_user')
